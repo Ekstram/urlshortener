@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Url shortener</title>
+		<meta charset="UTF-8">
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+	  	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	 	<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/sha1.js"></script>
+	</head>
+	
+	<body>
+	
+		<div id="wrap">
+			<h3>Welcome to the Url shortener app!</h3>
+			
+			<!-- send url that was written in #urlInput -->
+			<form action="">
+				Link<br /><input type="text" id="urlInput" placeholder="Type URL comes here" />
+				<br /><br /><button id="sendUrl">Short it</button>
+			</form>
+			
+			<!-- shortened url will be generated here -->
+			<div id="receiveStatus"></div>
+			
+		</div>
+		<script src="functions.js"></script>
+	</body>
+</html>
