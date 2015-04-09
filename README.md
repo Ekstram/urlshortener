@@ -1,4 +1,3 @@
-
 ##Url-shortener
 08/04/2015
 
@@ -8,4 +7,6 @@
 (- openshift)
 
 ####Use
+```
 $ node server.js
+```
