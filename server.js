@@ -4,11 +4,14 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var port = 3000;
 
+
+
 //Require database
-/*
 var Database = require('./database/database');
 var database = new Database();
-*/
+
+
+
 
 app.use(express.static(__dirname + '/client'));
 
@@ -23,30 +26,35 @@ io.on('connection', function(socket){
 
 	//SOCKETS *************************************
 	
-	/*
+	
 	//Receive data from client and query it in database
-  	socket.on('receiverName', function(msg){
+  	socket.on('sendUrl', function(msg){
   	msg = JSON.parse(msg);
    	console.log('message: ' + msg);
       
    	// Do a SQL query in searchEmployee hanlder
-    	// database.saveUrl(msg.word, socket);
+    	database.saveUrl(msg.word, socket);
   	});
   	
   	//Receive data from database and send it to client
-  	socket.on('receiverName', function(msg){
+  	socket.on('receiveData', function(msg){
   		// socket.emit('sendShortUrlToClient', JSON.stringify(msg))
-  		console.log('received' + message);
+  		console.log('received' + msg);
   	});
-  	*/
+  	
   	
   	//DEV AREA - TEST USE ONLY ****************************
   	
+  	/*
   	//Receive data from database and send it to client
-  	socket.on('sendUrlToSocket', function(msg){
+  	socket.on('', function(msg){
   		console.log('received ' + msg);
-  		socket.emit('sendShortUrlToClient')
+  		socket.emit('sendShortUrlToClient');
   	});
+  	*/
+  	
+  	
+
   	
 });
 

@@ -1,7 +1,11 @@
+
+##Url-shortener
 08/04/2015
-Url-shortener:
 
 - postgresql database
 	- id, shorturl, url, timestamp, clicked
 - nodejs 
-- openshift
+(- openshift)
+
+####Use
+$ node server.js

@@ -17,7 +17,7 @@ $(document).ready(function() {
 		console.log('Url sent ('+JSON.stringify(receive)+')');
 		
 		// Send request
-		socket.emit('sendUrlToSocket', JSON.stringify(receive.url));
+		socket.emit('sendUrl', JSON.stringify(receive.url));
 		
 	});
 
